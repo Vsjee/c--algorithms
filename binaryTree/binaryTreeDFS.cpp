@@ -27,17 +27,17 @@ void preorderTreeDFS(Node* root) {
 void inorderTreeDFS(Node* root) {
 	if(root == nullptr) return;
 	
-	preorderTreeDFS(root->left);
+	inorderTreeDFS(root->left);
 	cout<<root->value<<" ";
-	preorderTreeDFS(root->right);
+	inorderTreeDFS(root->right);
 }
 
 //postorder
 void postorderTreeDFS(Node* root){
 	if(root == nullptr) return;
 	
-	preorderTreeDFS(root->left);
-	preorderTreeDFS(root->right);
+	postorderTreeDFS(root->left);
+	postorderTreeDFS(root->right);
 	cout<<root->value<<" ";
 }
 
